@@ -203,7 +203,7 @@ jobs:
       - name: Print Container App URL
         run: |
           echo "## Container App URL" >> $GITHUB_STEP_SUMMARY
-          echo "http://${{ steps.url.outputs.runtime_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.url.outputs.runtime_url }}" >> $GITHUB_STEP_SUMMARY
 
       # ---- Eval: same step runs at every stage, behaves differently ----
       # based on what's actually in the repo. This is the mechanism that
